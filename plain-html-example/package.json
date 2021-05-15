@@ -1,0 +1,11 @@
+{
+  "name": "plain-html-example",
+  "version": "0.0.0",
+  "scripts": {
+    "hrs": "./node_modules/simple-hot-reload-server/dist/bin/hrs.js"
+  },
+  "private": true,
+  "devDependencies": {
+    "simple-hot-reload-server": "^1.2.0"
+  }
+}
