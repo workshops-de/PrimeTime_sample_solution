@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0;
+}
+
+body a {
+  color: #2196F3;
+  text-decoration: none;
+}
+body a:hover {
+  color: #0d89ec;
+}
+body a:active {
+  color: #0b7ad1;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.p-panel-titlebar {
+  background-color: #2F8EE5 !important;
+  color: white !important;
+}
+
+.p-menu {
+  width: auto !important;
+  margin: 0 !important;
+  border: none !important;
+  background-color: #2D353C !important;
+}
+
+.p-menu-list {
+  background-color: #2D353C;
+}
+
+.p-menuitem-text {
+  color: white !important;
+}
+
+.p-menuitem-icon {
+  color: white !important;
+  font-size: large !important;
+  margin-right: 1rem;
+}
+
+body .p-menu .p-menuitem :hover {
+  background-color: #2196F3 !important;
+}
