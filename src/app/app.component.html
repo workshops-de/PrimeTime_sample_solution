@@ -1,5 +1,5 @@
-<div id="header">
-  <div>
+<div class="p-grid" id="header">
+  <div class="p-col-10">
     <h1>
       <a routerLink="/">
         <i class="pi pi-calendar"></i>
@@ -9,12 +9,12 @@
   </div>
 </div>
 
-<div>
-  <nav>
+<div class="p-grid">
+  <nav class="p-col-2">
     <app-menu></app-menu>
   </nav>
 
-  <div id="content-body">
+  <div class="p-col-10" id="content-body">
     <router-outlet></router-outlet>
   </div>
 </div>
