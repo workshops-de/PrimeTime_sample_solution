@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  projectForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.projectForm = this.fb.group({
+      projectId: ['', [Validators.required, Validators.minLength(5)]],
+    });
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    alert(JSON.stringify(this.projectForm.value));
+  }
 }

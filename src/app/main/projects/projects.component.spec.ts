@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjectsComponent } from './projects.component';
+import { ValidationErrorsComponent } from '../validation-errors/validation-errors.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InputMaskModule } from 'primeng/inputmask';
+import { PanelModule } from 'primeng/panel';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -8,7 +13,16 @@ describe('ProjectsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProjectsComponent ]
+      declarations: [
+        ProjectsComponent,
+        ValidationErrorsComponent
+      ],
+      imports: [
+        ReactiveFormsModule,
+        InputMaskModule,
+        PanelModule,
+        NoopAnimationsModule
+      ]
     })
     .compileComponents();
   });

@@ -1,1 +1,12 @@
-<p>projects works!</p>
+<form (ngSubmit)="onSubmit()" [formGroup]="projectForm" class="p-grid">
+  <p-panel class="p-col-12" header="Add Project">
+    <div class="p-grid">
+      <label class="p-col-12 p-md-2" for="projectId">Project Id*</label>
+
+      <p-inputMask class="p-col-12 p-md-5" formControlName="projectId" id="projectId" mask="aaa-999"
+                   placeholder="ABC-123" slotChar="?"></p-inputMask>
+    </div>
+
+    <button icon="pi pi-save" label="Save" pButton type="submit"></button>
+  </p-panel>
+</form>
