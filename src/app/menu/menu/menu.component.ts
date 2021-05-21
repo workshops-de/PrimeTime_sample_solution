@@ -9,6 +9,7 @@ import { MenuItem, PrimeIcons } from 'primeng/api';
 export class MenuComponent implements OnInit {
 
   menuItems: MenuItem[] = [];
+  minifiedMenuItems: MenuItem[] = [];
 
   constructor() { }
 
@@ -33,5 +34,11 @@ export class MenuComponent implements OnInit {
         ]
       }
     ];
+
+    this.menuItems.forEach((item: MenuItem) => {
+      item.items?.forEach((nestedItem: MenuItem) => {
+        this.minifiedMenuItems.push({icon: nestedItem.icon, routerLink: nestedItem.routerLink});
+      });
+    });
   }
 }
