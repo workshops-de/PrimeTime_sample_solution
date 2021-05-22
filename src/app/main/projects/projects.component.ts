@@ -10,6 +10,8 @@ export class ProjectsComponent implements OnInit {
 
   projectForm: FormGroup;
 
+  minProjectDate = new Date();
+
   allDevs = [
     {label: 'Jill', value: 'Jill Cool'},
     {label: 'Joe', value: 'Joe Cool'},
@@ -26,6 +28,7 @@ export class ProjectsComponent implements OnInit {
     this.projectForm = this.fb.group({
       projectId: ['', [Validators.required, Validators.minLength(5)]],
       description: ['My cool project', [Validators.required, Validators.maxLength(140)]],
+      startDate: [new Date(), Validators.required],
       projectType: ['B'],
       selectedDevs: [[]],
       rating: [3]

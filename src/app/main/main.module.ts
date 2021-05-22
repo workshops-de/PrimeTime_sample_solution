@@ -12,6 +12,7 @@ import { ValidationErrorsComponent } from './validation-errors/validation-errors
 import { FieldsetModule } from 'primeng/fieldset';
 import { ListboxModule } from 'primeng/listbox';
 import { RatingModule } from 'primeng/rating';
+import { CalendarModule } from 'primeng/calendar';
 
 
 
@@ -31,7 +32,8 @@ import { RatingModule } from 'primeng/rating';
     RadioButtonModule,
     FieldsetModule,
     ListboxModule,
-    RatingModule
+    RatingModule,
+    CalendarModule
   ]
 })
 export class MainModule { }

@@ -21,6 +21,15 @@
     </div>
 
     <div class="p-grid">
+      <label class="ui-g-12 ui-md-2" for="startDate">Start Date</label>
+      <p-calendar [minDate]="minProjectDate" [showIcon]="true" class="ui-g-12 ui-md-5" dateFormat="dd/mm/yy"
+                  formControlName="startDate" id="startDate"></p-calendar>
+      <div class="ui-g-12 ui-md-5">
+        <app-validation-errors [form]="projectForm" field="startDate" nicename="Start Date"></app-validation-errors>
+      </div>
+    </div>
+
+    <div class="p-grid">
       <p-fieldset [collapsed]="false" [toggleable]="true" class="p-col-12" legend="Project Type">
         <p-radioButton formControlName="projectType" label="Front End" name="projectType" value="F"></p-radioButton>
         <p-radioButton formControlName="projectType" label="Backend End" name="projectType" value="B"></p-radioButton>

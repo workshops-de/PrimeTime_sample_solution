@@ -11,6 +11,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ListboxModule } from 'primeng/listbox';
 import { RatingModule } from 'primeng/rating';
+import { CalendarModule } from 'primeng/calendar';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -23,6 +24,7 @@ describe('ProjectsComponent', () => {
         ValidationErrorsComponent
       ],
       imports: [
+        NoopAnimationsModule,
         ReactiveFormsModule,
         InputMaskModule,
         PanelModule,
@@ -31,7 +33,7 @@ describe('ProjectsComponent', () => {
         RadioButtonModule,
         ListboxModule,
         RatingModule,
-        NoopAnimationsModule
+        CalendarModule
       ]
     })
     .compileComponents();
