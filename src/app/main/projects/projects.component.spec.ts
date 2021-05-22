@@ -9,6 +9,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { EditorModule } from 'primeng/editor';
 import { FieldsetModule } from 'primeng/fieldset';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { ListboxModule } from 'primeng/listbox';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -27,6 +28,7 @@ describe('ProjectsComponent', () => {
         EditorModule,
         FieldsetModule,
         RadioButtonModule,
+        ListboxModule,
         NoopAnimationsModule
       ]
     })

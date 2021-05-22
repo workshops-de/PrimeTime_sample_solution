@@ -28,6 +28,17 @@
       </p-fieldset>
     </div>
 
+    <div class="p-grid">
+      <label class="p-col-12 p-md-2" for="devs">Assigned Devs</label>
+      <p-listbox [filter]="true" [multiple]="true" [options]="allDevs" class="p-col-12 p-md-10"
+                 formControlName="selectedDevs" id="devs">
+        <ng-template let-dev pTemplate="item">
+          <img alt="avatar" class="avatar" src="http://i.pravatar.cc/100?u={{dev.label}}">
+          <span class="devName">{{dev.value}}</span>
+        </ng-template>
+      </p-listbox>
+    </div>
+
     <button [disabled]="hasFormErrors()"  icon="pi pi-save" label="Save" pButton type="submit"></button>
   </p-panel>
 </form>
