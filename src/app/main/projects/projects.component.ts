@@ -28,6 +28,7 @@ export class ProjectsComponent implements OnInit {
       description: ['My cool project', [Validators.required, Validators.maxLength(140)]],
       projectType: ['B'],
       selectedDevs: [[]],
+      rating: [3]
     });
   }
 

@@ -10,6 +10,7 @@ import { EditorModule } from 'primeng/editor';
 import { FieldsetModule } from 'primeng/fieldset';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ListboxModule } from 'primeng/listbox';
+import { RatingModule } from 'primeng/rating';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -29,6 +30,7 @@ describe('ProjectsComponent', () => {
         FieldsetModule,
         RadioButtonModule,
         ListboxModule,
+        RatingModule,
         NoopAnimationsModule
       ]
     })

@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { MenuModule } from 'primeng/menu';
+import { MenuComponent } from './menu/menu/menu.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -11,7 +12,8 @@ describe('AppComponent', () => {
         MenuModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MenuComponent
       ],
     }).compileComponents();
   });

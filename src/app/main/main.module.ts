@@ -11,6 +11,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { ValidationErrorsComponent } from './validation-errors/validation-errors.component';
 import { FieldsetModule } from 'primeng/fieldset';
 import { ListboxModule } from 'primeng/listbox';
+import { RatingModule } from 'primeng/rating';
 
 
 
@@ -29,7 +30,8 @@ import { ListboxModule } from 'primeng/listbox';
     EditorModule,
     RadioButtonModule,
     FieldsetModule,
-    ListboxModule
+    ListboxModule,
+    RatingModule
   ]
 })
 export class MainModule { }

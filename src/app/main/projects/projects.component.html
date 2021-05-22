@@ -39,6 +39,11 @@
       </p-listbox>
     </div>
 
+    <div class="p-grid">
+      <label class="p-col-12 p-md-2" for="rating" id="ratingLabel">Project Coolness</label>
+      <p-rating [cancel]="false" class="p-col-12 p-md-5" formControlName="rating" id="rating"></p-rating>
+    </div>
+
     <button [disabled]="hasFormErrors()"  icon="pi pi-save" label="Save" pButton type="submit"></button>
   </p-panel>
 </form>
