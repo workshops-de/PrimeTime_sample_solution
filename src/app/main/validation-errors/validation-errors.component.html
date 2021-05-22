@@ -1,8 +1,10 @@
-<div *ngIf="fieldErrors(fieldName)" class="ui-message ui-messages-error">
-  <i class="pi pi-times-circle"></i>
-  <span *ngIf="fieldErrors(fieldName)?.required">{{ niceName }} is required</span>
-  <span *ngIf="fieldErrors(fieldName)?.minlength">{{ niceName }}
-    must be {{ fieldErrors(fieldName)?.minlength.requiredLength }} characters</span>
-  <span *ngIf="fieldErrors(fieldName)?.maxlength">{{ niceName }}
-    must not exceed {{ fieldErrors(fieldName)?.maxlength.requiredLength }} characters</span>
+<div *ngIf="fieldErrors(fieldName)" class="p-message p-message-error">
+  <div class="p-message-wrapper">
+    <span class="p-message-icon pi pi-times-circle"></span>
+    <span *ngIf="fieldErrors(fieldName)?.required" class="p-message-summary">{{ niceName }} is required</span>
+    <span *ngIf="fieldErrors(fieldName)?.minlength" class="p-message-summary">{{ niceName }}
+      must be {{ fieldErrors(fieldName)?.minlength.requiredLength }} characters</span>
+    <span *ngIf="fieldErrors(fieldName)?.maxlength" class="p-message-summary">{{ niceName }}
+      must not exceed {{ fieldErrors(fieldName)?.maxlength.requiredLength }} characters</span>
+  </div>
 </div>
