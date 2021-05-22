@@ -13,10 +13,15 @@ export class ProjectsComponent implements OnInit {
   constructor(private fb: FormBuilder) {
     this.projectForm = this.fb.group({
       projectId: ['', [Validators.required, Validators.minLength(5)]],
+      description: ['My cool project', [Validators.required, Validators.maxLength(140)]],
+      projectType: ['B'],
     });
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  hasFormErrors() {
+    return !this.projectForm.valid;
   }
 
   onSubmit() {

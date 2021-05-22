@@ -6,12 +6,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputMaskModule } from 'primeng/inputmask';
 import { PanelModule } from 'primeng/panel';
+import { EditorModule } from 'primeng/editor';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { ValidationErrorsComponent } from './validation-errors/validation-errors.component';
+import { FieldsetModule } from 'primeng/fieldset';
 
 
 
 @NgModule({
   declarations: [
-    ProjectsComponent
+    ProjectsComponent,
+    ValidationErrorsComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +25,9 @@ import { PanelModule } from 'primeng/panel';
     PanelModule,
     ButtonModule,
     InputMaskModule,
+    EditorModule,
+    RadioButtonModule,
+    FieldsetModule
   ]
 })
 export class MainModule { }

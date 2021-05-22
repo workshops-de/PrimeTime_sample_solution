@@ -5,8 +5,29 @@
 
       <p-inputMask class="p-col-12 p-md-5" formControlName="projectId" id="projectId" mask="aaa-999"
                    placeholder="ABC-123" slotChar="?"></p-inputMask>
+
+      <div class="p-col-12 p-md-5">
+        <app-validation-errors [form]="projectForm" field="projectId" nicename="Project ID"></app-validation-errors>
+      </div>
     </div>
 
-    <button icon="pi pi-save" label="Save" pButton type="submit"></button>
+    <div class="p-grid">
+      <label class="p-col-12" for="description">Description</label>
+      <p-editor [style]="{'height':'200px'}" class="p-col-12" formControlName="description" id="description"></p-editor>
+
+      <div class="p-col-12">
+        <app-validation-errors [form]="projectForm" field="description" nicename="Description"></app-validation-errors>
+      </div>
+    </div>
+
+    <div class="p-grid">
+      <p-fieldset [collapsed]="false" [toggleable]="true" class="p-col-12" legend="Project Type">
+        <p-radioButton formControlName="projectType" label="Front End" name="projectType" value="F"></p-radioButton>
+        <p-radioButton formControlName="projectType" label="Backend End" name="projectType" value="B"></p-radioButton>
+        <p-radioButton formControlName="projectType" label="Operations" name="projectType" value="O"></p-radioButton>
+      </p-fieldset>
+    </div>
+
+    <button [disabled]="hasFormErrors()"  icon="pi pi-save" label="Save" pButton type="submit"></button>
   </p-panel>
 </form>

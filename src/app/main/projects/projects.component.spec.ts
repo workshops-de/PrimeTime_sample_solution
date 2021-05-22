@@ -6,6 +6,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InputMaskModule } from 'primeng/inputmask';
 import { PanelModule } from 'primeng/panel';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { EditorModule } from 'primeng/editor';
+import { FieldsetModule } from 'primeng/fieldset';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -21,6 +24,9 @@ describe('ProjectsComponent', () => {
         ReactiveFormsModule,
         InputMaskModule,
         PanelModule,
+        EditorModule,
+        FieldsetModule,
+        RadioButtonModule,
         NoopAnimationsModule
       ]
     })
