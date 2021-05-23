@@ -59,6 +59,8 @@ export class TimesComponent implements OnInit {
     return {label: project !== '' ? project : 'all', value: project}
   });
 
+  selectedRows: Array<any>;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -66,5 +68,9 @@ export class TimesComponent implements OnInit {
 
   applyFilterGlobal($event: Event) {
     this.dt.filterGlobal(($event.target as HTMLInputElement).value, 'contains');
+  }
+
+  onRowSelect() {
+    console.log(JSON.stringify(this.selectedRows));
   }
 }

@@ -2,6 +2,9 @@
   <p-table #dt
            [columns]="columns"
            [value]="timesheetData"
+           (onRowSelect)="onRowSelect()"
+           (onHeaderCheckboxToggle)="onRowSelect()"
+           [(selection)]="selectedRows"
            class="p-col-12"
            sortField="startTime"
            [sortOrder]="1">
@@ -14,6 +17,9 @@
     </ng-template>
     <ng-template pTemplate="header">
       <tr>
+        <th class="selectBoxColumn" scope="col">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
         <th *ngFor="let column of columns"
             [pSortableColumn]="column.field"
             scope="col">
@@ -22,6 +28,7 @@
         </th>
       </tr>
       <tr>
+        <th scope="col">&nbsp;</th>
         <th *ngFor="let column of columns"
             scope="col">
           <ng-container *ngIf="column.field === 'project'">
@@ -36,6 +43,9 @@
     </ng-template>
     <ng-template let-rowData pTemplate="body">
       <tr>
+        <td class="selectBoxColumn">
+          <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+        </td>
         <ng-container *ngFor="let column of columns">
           <td [ngSwitch]="column.type">
             <ng-container *ngSwitchCase="'time'">
