@@ -51,6 +51,30 @@ export class TimesComponent implements OnInit {
       startTime: new Date(),
       endTime: new Date(),
       date: new Date()
+    },
+    {
+      user: 'Danni',
+      project: 'Payroll App',
+      category: 'Frontend',
+      startTime: new Date(),
+      endTime: new Date(),
+      date: new Date()
+    },
+    {
+      user: 'Jenny',
+      project: 'Mobile App',
+      category: 'Operations',
+      startTime: new Date(),
+      endTime: new Date(),
+      date: new Date()
+    },
+    {
+      user: 'Rohit',
+      project: 'Mobile App',
+      category: 'Frontend',
+      startTime: new Date(),
+      endTime: new Date(),
+      date: new Date()
     }
   ];
 

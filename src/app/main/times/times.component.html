@@ -5,9 +5,15 @@
            (onRowSelect)="onRowSelect()"
            (onHeaderCheckboxToggle)="onRowSelect()"
            [(selection)]="selectedRows"
-           class="p-col-12"
+           [paginator]="true"
+           [showCurrentPageReport]="true"
+           [pageLinks]="8"
+           [rowsPerPageOptions]="[5,10,15,20]"
+           [rows]="5"
+           [totalRecords]="timesheetData.length"
+           [sortOrder]="1"
            sortField="startTime"
-           [sortOrder]="1">
+           class="p-col-12">
     <ng-template pTemplate="caption">
       <div class="header p-d-flex p-ai-center p-jc-between">
         <h2>
