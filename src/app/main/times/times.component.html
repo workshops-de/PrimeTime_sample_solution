@@ -1,16 +1,17 @@
 <div class="p-grid">
-  <div class="header p-col-12">
-    <h2>
-      Timesheets
-    </h2>
-  </div>
-
   <p-table #dt
            [columns]="columns"
            [value]="timesheetData"
            class="p-col-12"
            sortField="startTime"
            [sortOrder]="1">
+    <ng-template pTemplate="caption">
+      <div class="header p-d-flex p-ai-center p-jc-between">
+        <h2>
+          Timesheets
+        </h2>
+      </div>
+    </ng-template>
     <ng-template pTemplate="header">
       <tr>
         <th *ngFor="let column of columns"
@@ -49,6 +50,21 @@
           </td>
         </ng-container>
       </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <label for="tableSearch">Search: </label>
+      <input
+        (input)="applyFilterGlobal($event)"
+        id="tableSearch"
+        pInputText
+        placeholder="Enter search query"
+        type="text">
+      <button (click)="dt.exportCSV()"
+              class="p-ml-1"
+              icon="pi pi-table"
+              label="Export"
+              pButton
+              type="button"></button>
     </ng-template>
   </p-table>
 </div>

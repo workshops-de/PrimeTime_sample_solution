@@ -16,6 +16,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { TimesComponent } from './times/times.component';
 import { TableModule } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 
@@ -31,6 +32,7 @@ import { DropdownModule } from 'primeng/dropdown';
     ReactiveFormsModule,
     PanelModule,
     ButtonModule,
+    InputTextModule,
     InputMaskModule,
     EditorModule,
     RadioButtonModule,

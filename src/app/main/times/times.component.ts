@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-times',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./times.component.scss']
 })
 export class TimesComponent implements OnInit {
+
+  @ViewChild('dt') dt: Table;
 
   columns = [
     {header: 'User', field: 'user', type: 'string'},
@@ -61,4 +64,7 @@ export class TimesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  applyFilterGlobal($event: Event) {
+    this.dt.filterGlobal(($event.target as HTMLInputElement).value, 'contains');
+  }
 }
