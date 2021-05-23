@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TimesComponent } from './times.component';
 import { TableModule } from 'primeng/table';
+import { DropdownModule } from 'primeng/dropdown';
 
 describe('TimesComponent', () => {
   let component: TimesComponent;
@@ -11,7 +12,8 @@ describe('TimesComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ TimesComponent ],
       imports: [
-        TableModule
+        TableModule,
+        DropdownModule
       ]
     })
     .compileComponents();

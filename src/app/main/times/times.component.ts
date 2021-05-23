@@ -51,6 +51,11 @@ export class TimesComponent implements OnInit {
     }
   ];
 
+  projectNames = ['', 'Payroll App', 'Mobile App', 'Agile Times'];
+  projects = this.projectNames.map((project) => {
+    return {label: project !== '' ? project : 'all', value: project}
+  });
+
   constructor() { }
 
   ngOnInit(): void {

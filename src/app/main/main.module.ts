@@ -15,6 +15,7 @@ import { RatingModule } from 'primeng/rating';
 import { CalendarModule } from 'primeng/calendar';
 import { TimesComponent } from './times/times.component';
 import { TableModule } from 'primeng/table';
+import { DropdownModule } from 'primeng/dropdown';
 
 
 
@@ -37,7 +38,8 @@ import { TableModule } from 'primeng/table';
     ListboxModule,
     RatingModule,
     CalendarModule,
-    TableModule
+    TableModule,
+    DropdownModule
   ]
 })
 export class MainModule { }

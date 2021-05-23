@@ -5,14 +5,31 @@
     </h2>
   </div>
 
-  <p-table [columns]="columns"
+  <p-table #dt
+           [columns]="columns"
            [value]="timesheetData"
-           class="p-col-12">
+           class="p-col-12"
+           sortField="startTime"
+           [sortOrder]="1">
     <ng-template pTemplate="header">
       <tr>
         <th *ngFor="let column of columns"
+            [pSortableColumn]="column.field"
             scope="col">
           {{column.header}}
+          <p-sortIcon [field]="column.field"></p-sortIcon>
+        </th>
+      </tr>
+      <tr>
+        <th *ngFor="let column of columns"
+            scope="col">
+          <ng-container *ngIf="column.field === 'project'">
+            <p-dropdown
+              (onChange)="dt.filter($event.value,column.field, 'equals')"
+              [options]="projects"
+              appendTo="body"
+              styleClass="p-column-filter"></p-dropdown>
+          </ng-container>
         </th>
       </tr>
     </ng-template>
