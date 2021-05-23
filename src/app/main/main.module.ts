@@ -13,13 +13,16 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { ListboxModule } from 'primeng/listbox';
 import { RatingModule } from 'primeng/rating';
 import { CalendarModule } from 'primeng/calendar';
+import { TimesComponent } from './times/times.component';
+import { TableModule } from 'primeng/table';
 
 
 
 @NgModule({
   declarations: [
     ProjectsComponent,
-    ValidationErrorsComponent
+    ValidationErrorsComponent,
+    TimesComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +36,8 @@ import { CalendarModule } from 'primeng/calendar';
     FieldsetModule,
     ListboxModule,
     RatingModule,
-    CalendarModule
+    CalendarModule,
+    TableModule
   ]
 })
 export class MainModule { }
