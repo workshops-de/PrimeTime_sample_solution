@@ -17,14 +17,16 @@ import { TimesComponent } from './times/times.component';
 import { TableModule } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
-
+import { TimesheetComponent } from './timesheet/timesheet.component';
+import { TabViewModule } from 'primeng/tabview';
 
 
 @NgModule({
   declarations: [
     ProjectsComponent,
     ValidationErrorsComponent,
-    TimesComponent
+    TimesComponent,
+    TimesheetComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +43,8 @@ import { InputTextModule } from 'primeng/inputtext';
     RatingModule,
     CalendarModule,
     TableModule,
-    DropdownModule
+    DropdownModule,
+    TabViewModule
   ]
 })
 export class MainModule { }

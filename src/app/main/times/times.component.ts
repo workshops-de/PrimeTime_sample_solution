@@ -30,7 +30,7 @@ export class TimesComponent implements OnInit {
     },
     {
       user: 'Karen',
-      project: 'Agile Times',
+      project: 'PrimeTime',
       category: 'Frontend',
       startTime: new Date(),
       endTime: new Date(),
@@ -46,7 +46,7 @@ export class TimesComponent implements OnInit {
     },
     {
       user: 'Rohit',
-      project: 'Agile Times',
+      project: 'PrimeTime',
       category: 'Backend',
       startTime: new Date(),
       endTime: new Date(),
@@ -78,7 +78,7 @@ export class TimesComponent implements OnInit {
     }
   ];
 
-  projectNames = ['', 'Payroll App', 'Mobile App', 'Agile Times'];
+  projectNames = ['', 'Payroll App', 'Mobile App', 'PrimeTime'];
   projects = this.projectNames.map((project) => {
     return {label: project !== '' ? project : 'all', value: project}
   });

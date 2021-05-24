@@ -40,7 +40,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/quill/dist/quill.js"
+              "node_modules/quill/dist/quill.js",
+              "node_modules/moment/min/moment.min.js"
             ]
           },
           "configurations": {
@@ -116,7 +117,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/quill/dist/quill.js"
+              "node_modules/quill/dist/quill.js",
+              "node_modules/moment/min/moment.min.js"
             ]
           }
         }

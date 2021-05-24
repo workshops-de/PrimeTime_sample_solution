@@ -1,0 +1,11 @@
+<div class="header p-col-12">
+  <h2>
+    {{ day }}
+  </h2>
+</div>
+
+<p-tabView (onChange)="onChangeTabs($event)" class="p-col-12">
+  <p-tabPanel *ngFor="let tab of daysOfWeek" header="{{tab}}">
+
+  </p-tabPanel>
+</p-tabView>
