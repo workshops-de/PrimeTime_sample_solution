@@ -12,6 +12,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { ListboxModule } from 'primeng/listbox';
 import { RatingModule } from 'primeng/rating';
 import { CalendarModule } from 'primeng/calendar';
+import { ButtonModule } from 'primeng/button';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -33,7 +34,8 @@ describe('ProjectsComponent', () => {
         RadioButtonModule,
         ListboxModule,
         RatingModule,
-        CalendarModule
+        CalendarModule,
+        ButtonModule
       ]
     })
     .compileComponents();

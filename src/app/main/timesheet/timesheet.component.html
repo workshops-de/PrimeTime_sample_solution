@@ -28,3 +28,19 @@
     </p-table>
   </p-tabPanel>
 </p-tabView>
+
+<button (click)="displayEditDialog = true" label="Add Time Entry" pButton></button>
+
+<p-dialog [(visible)]="displayEditDialog"
+          [modal]="true"
+          header="Create Time"
+          styleClass="displayEditDialog">
+  <div class="dialogBody">
+
+  </div>
+
+  <p-footer>
+    <button (click)="saveNewEntry()" icon="pi pi-check" label="Save" pButton></button>
+    <button (click)="cancelDialog()" class="p-button-secondary" icon="pi pi-times" label="Cancel" pButton></button>
+  </p-footer>
+</p-dialog>

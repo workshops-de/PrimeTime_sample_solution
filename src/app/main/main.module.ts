@@ -19,6 +19,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { TimesheetComponent } from './timesheet/timesheet.component';
 import { TabViewModule } from 'primeng/tabview';
+import { DialogModule } from 'primeng/dialog';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { TabViewModule } from 'primeng/tabview';
     CalendarModule,
     TableModule,
     DropdownModule,
-    TabViewModule
+    TabViewModule,
+    DialogModule
   ]
 })
 export class MainModule { }

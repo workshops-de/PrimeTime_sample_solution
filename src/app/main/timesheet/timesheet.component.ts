@@ -15,6 +15,8 @@ export class TimesheetComponent implements OnInit {
   day = this.daysOfWeek[0];
   dateAndMonth = TimesheetComponent.formatDate(this.day);
 
+  displayEditDialog = false;
+
   columns = [
     {header: 'Project', field: 'project', type: 'string'},
     {header: 'Category', field: 'category', type: 'string'},
@@ -50,5 +52,13 @@ export class TimesheetComponent implements OnInit {
     const index = event.index;
     this.day = this.daysOfWeek[index];
     this.dateAndMonth = TimesheetComponent.formatDate(this.day);
+  }
+
+  cancelDialog() {
+    this.displayEditDialog = false;
+  }
+
+  saveNewEntry() {
+    this.displayEditDialog = false;
   }
 }

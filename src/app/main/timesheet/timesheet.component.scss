@@ -1,0 +1,7 @@
+.dialogBody {
+  height: 400px;
+}
+
+:host ::ng-deep .displayEditDialog {
+  width: 50vw;
+}

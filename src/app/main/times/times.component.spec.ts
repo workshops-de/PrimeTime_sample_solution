@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TimesComponent } from './times.component';
 import { TableModule } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
 
 describe('TimesComponent', () => {
   let component: TimesComponent;
@@ -13,7 +14,8 @@ describe('TimesComponent', () => {
       declarations: [ TimesComponent ],
       imports: [
         TableModule,
-        DropdownModule
+        DropdownModule,
+        ButtonModule
       ]
     })
     .compileComponents();
