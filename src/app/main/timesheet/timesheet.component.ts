@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem, TreeNode } from 'primeng/api';
 import { SampleProjectsData } from './sample.projects.data';
+import { SamplePeopleData } from './sample.people.data';
 
 declare const moment: any;
 
 export enum StepNames {
   TimeStep,
-  ProjectStep
+  ProjectStep,
+  PeopleStep
 }
 
 @Component({
@@ -43,6 +45,7 @@ export class TimesheetComponent implements OnInit {
     {label: 'People'}
   ];
   projectsTree: TreeNode[] = SampleProjectsData.projects;
+  people: any = SamplePeopleData.people;
 
   private userTimeData = [
     {day: 'Monday', startTime: '9:00', endTime: '17:00', project: 'PrimeTime', category: 'Frontend'},

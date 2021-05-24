@@ -22,6 +22,8 @@ import { TabViewModule } from 'primeng/tabview';
 import { DialogModule } from 'primeng/dialog';
 import { StepsModule } from 'primeng/steps';
 import { TreeModule } from 'primeng/tree';
+import { TooltipModule } from 'primeng/tooltip';
+import { DataViewModule } from 'primeng/dataview';
 
 
 @NgModule({
@@ -52,7 +54,9 @@ import { TreeModule } from 'primeng/tree';
     DialogModule,
     StepsModule,
     CalendarModule,
-    TreeModule
+    TreeModule,
+    TooltipModule,
+    DataViewModule
   ]
 })
 export class MainModule { }

@@ -17,3 +17,14 @@
 :host p-tree ::ng-deep .p-treenode-content {
   padding: 1rem !important;
 }
+
+:host p-dataView ::ng-deep .p-panel-content {
+  padding: 0;
+}
+
+:host p-dataView ::ng-deep .p-panel-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 144px;
+}

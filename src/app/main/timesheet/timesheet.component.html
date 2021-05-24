@@ -51,6 +51,15 @@
               layout="horizontal"
               selectionMode="single"></p-tree>
     </div>
+    <div class="step" *ngSwitchCase="StepNames.PeopleStep">
+      <p-dataView [paginator]="true" [rows]="4" [value]="people">
+        <ng-template let-person pTemplate="listItem">
+          <p-panel class="p-col-12 p-md-3" header="{{person.firstName}} {{person.lastName}}">
+            <img [pTooltip]="person.email" [src]="person.avatar" alt="avatar" tooltipPosition="bottom">
+          </p-panel>
+        </ng-template>
+      </p-dataView>
+    </div>
   </div>
 
   <p-footer>

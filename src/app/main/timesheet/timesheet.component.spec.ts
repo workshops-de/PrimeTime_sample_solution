@@ -9,6 +9,8 @@ import { StepsModule } from 'primeng/steps';
 import { CalendarModule } from 'primeng/calendar';
 import { TreeModule } from 'primeng/tree';
 import { RouterTestingModule } from '@angular/router/testing';
+import { TooltipModule } from 'primeng/tooltip';
+import { DataViewModule } from 'primeng/dataview';
 
 describe('TimesheetComponent', () => {
   let component: TimesheetComponent;
@@ -25,7 +27,9 @@ describe('TimesheetComponent', () => {
         ButtonModule,
         StepsModule,
         CalendarModule,
-        TreeModule
+        TreeModule,
+        TooltipModule,
+        DataViewModule
       ]
     })
     .compileComponents();
