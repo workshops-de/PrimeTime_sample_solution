@@ -9,9 +9,9 @@ export class SampleProjectsData {
       'selectable': false,
       'children': [
         {
-          'label': 'Agile Times',
+          'label': 'PrimeTime',
           'selectable': false,
-          'data': 'agile',
+          'data': 'primeTime',
           'expandedIcon': 'pi pi-folder-open',
           'collapsedIcon': 'pi pi-folder',
           'children': [

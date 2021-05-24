@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from './projects/projects.component';
 import { MainRoutingModule } from './main-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputMaskModule } from 'primeng/inputmask';
 import { PanelModule } from 'primeng/panel';
@@ -20,6 +20,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { TimesheetComponent } from './timesheet/timesheet.component';
 import { TabViewModule } from 'primeng/tabview';
 import { DialogModule } from 'primeng/dialog';
+import { StepsModule } from 'primeng/steps';
+import { TreeModule } from 'primeng/tree';
 
 
 @NgModule({
@@ -32,6 +34,7 @@ import { DialogModule } from 'primeng/dialog';
   imports: [
     CommonModule,
     MainRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     PanelModule,
     ButtonModule,
@@ -46,7 +49,10 @@ import { DialogModule } from 'primeng/dialog';
     TableModule,
     DropdownModule,
     TabViewModule,
-    DialogModule
+    DialogModule,
+    StepsModule,
+    CalendarModule,
+    TreeModule
   ]
 })
 export class MainModule { }

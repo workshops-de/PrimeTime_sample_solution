@@ -33,10 +33,24 @@
 
 <p-dialog [(visible)]="displayEditDialog"
           [modal]="true"
+          [ngSwitch]="dialogStepIndex"
           header="Create Time"
           styleClass="displayEditDialog">
   <div class="dialogBody">
-
+    <p-steps [(activeIndex)]="dialogStepIndex"
+             [model]="dialogSteps"
+             [readonly]="false"
+             styleClass="steps"></p-steps>
+    <div class="step" *ngSwitchCase="StepNames.TimeStep">
+      <p-calendar [(ngModel)]="selectedDate"
+                  appendTo="body"></p-calendar>
+    </div>
+    <div class="step" *ngSwitchCase="StepNames.ProjectStep">
+      <p-tree [(selection)]="selectedProject"
+              [value]="projectsTree"
+              layout="horizontal"
+              selectionMode="single"></p-tree>
+    </div>
   </div>
 
   <p-footer>

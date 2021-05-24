@@ -5,3 +5,15 @@
 :host ::ng-deep .displayEditDialog {
   width: 50vw;
 }
+
+:host p-steps ::ng-deep .steps {
+  padding-top: 1rem;
+}
+
+.step {
+  margin: 1rem;
+}
+
+:host p-tree ::ng-deep .p-treenode-content {
+  padding: 1rem !important;
+}

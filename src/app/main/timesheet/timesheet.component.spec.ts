@@ -5,6 +5,10 @@ import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
+import { StepsModule } from 'primeng/steps';
+import { CalendarModule } from 'primeng/calendar';
+import { TreeModule } from 'primeng/tree';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('TimesheetComponent', () => {
   let component: TimesheetComponent;
@@ -14,10 +18,14 @@ describe('TimesheetComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ TimesheetComponent ],
       imports: [
+        RouterTestingModule,
         TabViewModule,
         TableModule,
         DialogModule,
-        ButtonModule
+        ButtonModule,
+        StepsModule,
+        CalendarModule,
+        TreeModule
       ]
     })
     .compileComponents();

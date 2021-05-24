@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem, TreeNode } from 'primeng/api';
+import { SampleProjectsData } from './sample.projects.data';
 
 declare const moment: any;
+
+export enum StepNames {
+  TimeStep,
+  ProjectStep
+}
 
 @Component({
   selector: 'app-timesheet',
@@ -15,6 +22,9 @@ export class TimesheetComponent implements OnInit {
   day = this.daysOfWeek[0];
   dateAndMonth = TimesheetComponent.formatDate(this.day);
 
+  selectedDate = new Date();
+  selectedProject: TreeNode;
+
   displayEditDialog = false;
 
   columns = [
@@ -23,6 +33,16 @@ export class TimesheetComponent implements OnInit {
     {header: 'Start Time', field: 'startTime', type: 'time'},
     {header: 'End Time', field: 'endTime', type: 'time'}
   ];
+
+  StepNames = StepNames;
+
+  dialogStepIndex = StepNames.TimeStep;
+  dialogSteps: MenuItem[] = [
+    {label: 'Time'},
+    {label: 'Project'},
+    {label: 'People'}
+  ];
+  projectsTree: TreeNode[] = SampleProjectsData.projects;
 
   private userTimeData = [
     {day: 'Monday', startTime: '9:00', endTime: '17:00', project: 'PrimeTime', category: 'Frontend'},
