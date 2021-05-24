@@ -11,6 +11,9 @@ import { TreeModule } from 'primeng/tree';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TooltipModule } from 'primeng/tooltip';
 import { DataViewModule } from 'primeng/dataview';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 describe('TimesheetComponent', () => {
   let component: TimesheetComponent;
@@ -29,7 +32,13 @@ describe('TimesheetComponent', () => {
         CalendarModule,
         TreeModule,
         TooltipModule,
-        DataViewModule
+        DataViewModule,
+        ConfirmDialogModule,
+        ToastModule,
+      ],
+      providers: [
+        MessageService,
+        ConfirmationService
       ]
     })
     .compileComponents();

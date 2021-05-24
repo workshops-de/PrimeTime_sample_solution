@@ -67,3 +67,17 @@
     <button (click)="cancelDialog()" class="p-button-secondary" icon="pi pi-times" label="Cancel" pButton></button>
   </p-footer>
 </p-dialog>
+
+<p-confirmDialog #confirmDialog [visible]="false" icon="pi pi-question-circle">
+  <ng-template pTemplate="footer">
+    <button (click)="confirmDialog.reject()" icon="pi pi-times" label="No, go back" pButton type="button"></button>
+    <button (click)="confirmDialog.accept()"
+            icon="pi pi-check"
+            class="p-button-danger"
+            label="Yes, lose changes"
+            pButton
+            type="button"></button>
+  </ng-template>
+</p-confirmDialog>
+
+<p-toast></p-toast>

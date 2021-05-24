@@ -24,6 +24,9 @@ import { StepsModule } from 'primeng/steps';
 import { TreeModule } from 'primeng/tree';
 import { TooltipModule } from 'primeng/tooltip';
 import { DataViewModule } from 'primeng/dataview';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 
 @NgModule({
@@ -56,7 +59,13 @@ import { DataViewModule } from 'primeng/dataview';
     CalendarModule,
     TreeModule,
     TooltipModule,
-    DataViewModule
+    DataViewModule,
+    ConfirmDialogModule,
+    ToastModule
+  ],
+  providers: [
+    MessageService,
+    ConfirmationService
   ]
 })
 export class MainModule { }
