@@ -14,6 +14,7 @@ import { DataViewModule } from 'primeng/dataview';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmationService, MessageService } from 'primeng/api';
+import { FormsModule } from '@angular/forms';
 
 describe('TimesheetComponent', () => {
   let component: TimesheetComponent;
@@ -23,6 +24,7 @@ describe('TimesheetComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ TimesheetComponent ],
       imports: [
+        FormsModule,
         RouterTestingModule,
         TabViewModule,
         TableModule,
