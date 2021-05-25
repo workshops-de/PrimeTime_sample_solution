@@ -77,3 +77,15 @@ li {
   grid-template-rows: 1fr 1fr 1fr;
   gap: 20px 20px;
 }
+
+.flex-container {
+  width: 550px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-item {
+  width: 100px;
+}
