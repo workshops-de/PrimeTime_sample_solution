@@ -23,3 +23,25 @@ a {
 a:hover {
   color: orange;
 }
+
+p {
+  line-height: 1.5;
+  break-after: column;
+}
+
+article {
+  column-width: 550px;
+  gap: 20px;
+}
+
+.container {
+  width: 960px;
+  margin: 3em;
+}
+
+.column {
+  display: inline-block;
+  width: 33%;
+  box-sizing: border-box;
+  padding-right: 2em;
+}
