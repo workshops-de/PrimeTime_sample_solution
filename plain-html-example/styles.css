@@ -45,3 +45,21 @@ article {
   box-sizing: border-box;
   padding-right: 2em;
 }
+
+caption {
+  background-color: #ccc;
+  padding: 1em;
+}
+
+th {
+  background-color: #ddd;
+  padding: 1em;
+}
+
+td {
+  padding: 1em;
+}
+
+tr:nth-child(odd) {
+  background-color: #eee;
+}
