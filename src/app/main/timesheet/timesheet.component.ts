@@ -72,7 +72,7 @@ export class TimesheetComponent implements OnInit {
   getTimesForDay(tabName: string): {}[] {
     return this.userTimeData.filter((row) => {
       return row.day === tabName;
-    })
+    });
   }
 
   onChangeTabs(event: any) {
