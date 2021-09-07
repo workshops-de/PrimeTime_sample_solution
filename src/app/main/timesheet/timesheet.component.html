@@ -13,7 +13,8 @@
       <ng-template pTemplate="header">
         <tr>
           <th *ngFor="let column of columns"
-              scope="col">
+              scope="col"
+              data-cy="column">
             {{column.header}}
           </th>
         </tr>
