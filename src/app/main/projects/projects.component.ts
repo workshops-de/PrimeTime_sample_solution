@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-projects',
@@ -35,7 +36,19 @@ export class ProjectsComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.projectForm.valueChanges
+      .pipe(
+        map((value: any) => {
+          value.projectId = value.projectId.toUpperCase();
+          return value;
+        }),
+        filter(() => this.projectForm.valid)
+      )
+      .subscribe((value) => {
+        console.log('Form values: ', JSON.stringify(value));
+      });
+  }
 
   hasFormErrors() {
     return !this.projectForm.valid;
